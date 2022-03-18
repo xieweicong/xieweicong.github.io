@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>xieweicong&#39;s blog</title>
+    <link>https://www.xieweicong.com/</link>
+    <description>Recent content on xieweicong&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Tue, 15 Mar 2022 18:11:07 +0800</lastBuildDate><atom:link href="https://www.xieweicong.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Add_LaTeX_Support_in_Hugo</title>
+      <link>https://www.xieweicong.com/posts/add-latex-support-in-hugo/</link>
+      <pubDate>Tue, 15 Mar 2022 18:11:07 +0800</pubDate>
+      
+      <guid>https://www.xieweicong.com/posts/add-latex-support-in-hugo/</guid>
+      <description>最简单的方法 通过 CND 导入 JS 的库 Math Jax 就可以支持 LaTeX
+在当前主题文件夹的 /layouts/partials/footer.html中添加
+&amp;lt;script type=&amp;#34;text/javascript&amp;#34; src=&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;#34; &amp;gt;&amp;lt;/script&amp;gt; 之后在 .md 文件中使用$$ $$框住 LaTex 公式即可
+$$ \dfrac {V}{N}=\dfrac {4\pi }{3}\left( \dfrac {d}{2}\right) ^{3} $$ 就会变成
+$$ \dfrac {V}{N}=\dfrac {4\pi }{3}\left( \dfrac {d}{2}\right) ^{3} $$
+注意： 使用 Typora 的时候，输入 $$ 会自动变成公式的编辑框，可以使用 vscode 来单独编辑。
+某些主题下不生效 在用某些主题下，上面一条不生效，可以使用下面的方法
+在当前主题文件夹的 /layouts/partials/header.html中添加
+&amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css&amp;#34; integrity=&amp;#34;sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt; &amp;lt;script defer src=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js&amp;#34; integrity=&amp;#34;sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script defer src=&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js&amp;#34; integrity=&amp;#34;sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; document.addEventListener(&amp;#34;DOMContentLoaded&amp;#34;, function() { renderMathInElement( document.</description>
+    </item>
+    
+    <item>
+      <title>通过统计力学求分子速度及碰撞平均时间</title>
+      <link>https://www.xieweicong.com/posts/%E9%80%9A%E8%BF%87%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6%E6%B1%82%E5%88%86%E5%AD%90%E9%80%9F%E5%BA%A6%E5%8F%8A%E7%A2%B0%E6%92%9E%E5%B9%B3%E5%9D%87%E6%97%B6%E9%97%B4/</link>
+      <pubDate>Tue, 15 Mar 2022 17:36:40 +0800</pubDate>
+      
+      <guid>https://www.xieweicong.com/posts/%E9%80%9A%E8%BF%87%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6%E6%B1%82%E5%88%86%E5%AD%90%E9%80%9F%E5%BA%A6%E5%8F%8A%E7%A2%B0%E6%92%9E%E5%B9%B3%E5%9D%87%E6%97%B6%E9%97%B4/</guid>
+      <description>前言 今天的课学习了宏观体系的统计力学方面的知识，关于其中的一道应用例题我觉得很有趣，于是分享一下。
+ゆらぎ(fluctuation)と相関時間(correlation time) 中文是涨落和相关时间，是指在极微小的空间下的物理量波动和每次波动的平均间隔时间。这个物理量表示为A(t)可以想象成动能，在极微小的世界里处于随机游走状态，这种游走称为ゆらぎ。
+理想气体分子的分子速度与相关时间 在标准大气压的箱子中，有22.4L的 1mol 理想气体，温度是300K，平均分子间隔为 d
+设想分子间的有效控制距离如图所示，则分子有效体积为
+$$ \dfrac {V}{N}=\dfrac {4\pi }{3}\left( \dfrac {d}{2}\right) ^{3} $$
+N为分子总量，V为总体积，使用球的体积公式容易得到上式 $$ d=2\left( \dfrac {3}{4\pi }\left( \dfrac {V}{N}\right) \right) ^{\dfrac {1}{3}} $$ 于是简单得到d的表达式，根据条件已知 $$ V=22.4\times 10^{-3}m^{3} $$$$ N=6\times 10^{23} $$ 根据能量均分定理 $$ \dfrac {m\overline {v}^{2}}{2}=\dfrac {3}{2}k_{B}T $$加上之前的温度$T=3000k$得出$$ \overline {v}=\sqrt {\dfrac {3k_{B}T}{m}}=1.4\times 10^{3}ms^{-1} $$ 可以看到分子在微观环境下的移动速度几乎在四倍音速，也就是四马赫左右的速度，非常的夸张。也是通过宏观世界去理论推导微观世界的分子速度，对结论很是吃惊，但使用的手法却非常简单，于是分享一下。</description>
+    </item>
+    
+    <item>
+      <title>Docker从布置到上线</title>
+      <link>https://www.xieweicong.com/posts/docker%E4%BB%8E%E5%B8%83%E7%BD%AE%E5%88%B0%E4%B8%8A%E7%BA%BF/</link>
+      <pubDate>Thu, 16 Dec 2021 17:42:17 +0800</pubDate>
+      
+      <guid>https://www.xieweicong.com/posts/docker%E4%BB%8E%E5%B8%83%E7%BD%AE%E5%88%B0%E4%B8%8A%E7%BA%BF/</guid>
+      <description>前言 docker技术真的非常好用和方便，但看了很多文章很杂乱，所以整理一个从安装打包到上线的全过程
+安装doker macOS最好直接官网下载GUI的版本安装
+在linex远程服务器上
+curl -fsSL &amp;lt;https://get.docker.com&amp;gt; | bash -s docker --mirror Aliyun 修改允许的hosts 在django中需要填入vps的地址或域名
+文件准备 pip.conf 这个是pip的配置文件，制作完成之后，将这个文件复制到虚拟机对应的pip根目录下，即可完成替换。主要功能是换成阿里云的镜像。在境外的话不需要这个。
+[global] index-url = &amp;lt;http://mirrors.aliyun.com/pypi/simple/&amp;gt; [install] trusted-host=mirrors.aliyun.com requirements.txt 用下列代码快速导出本机或虚拟环境的所有依赖
+pip freeze &amp;gt; requirements.txt Dockerfile docker在创建时将会使用这个文件进行构建。比较特殊的是这个文件没有后缀名，所以像Mac就不能直接创建，使用touch命令执行生成。
+touch Dockerfile vim Dockerfile FROM python:3.9 RUN mkdir -p /usr/src/app WORKDIR /usr/src/app COPY pip.conf /root/.pip/pip.conf COPY requirements.txt /usr/src/app/ RUN pip install -r /usr/src/app/requirements.txt RUN rm -rf /usr/src/app COPY . /usr/src/app CMD [ &amp;#34;python&amp;#34;, &amp;#34;./manage.py&amp;#34;, &amp;#34;runserver&amp;#34;, &amp;#34;0.0.0.0:8080&amp;#34;] CMD [ &amp;#34;python3&amp;#34;, &amp;#34;-m&amp;#34; , &amp;#34;flask&amp;#34;, &amp;#34;run&amp;#34;, &amp;#34;--host=0.</description>
+    </item>
+    
+    <item>
+      <title>使用hugo和github Pages搭建个人博客</title>
+      <link>https://www.xieweicong.com/posts/%E4%BD%BF%E7%94%A8hugo%E5%92%8Cgithub-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Fri, 10 Dec 2021 16:51:06 +0800</pubDate>
+      
+      <guid>https://www.xieweicong.com/posts/%E4%BD%BF%E7%94%A8hugo%E5%92%8Cgithub-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>尝试过hexo，但因为看到hugo的模板更好看所以选择使用hugo。而且hugo是使用go语言开发，之后考虑学习golan和后端，所以先使用一下这个框架去感受一下。
+安装Homebrew $ /bin/bash -c &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&amp;#34; 安装hugo $ brew install hugo 检测安装成功
+$ hugo version 创建网站文件 $ hugo new site [sitename] $ cd [sitename] 添加主题 在 https://themes.gohugo.io 中找到自己想要的主题，进入对应 github 准备 clone 下来。这里使用 hermit 举例子。
+$ cd sitename/themes $ git clone https://github.com/Track3/hermit.git 进入 clone 下来的文件夹，可以看到这个主题的文件。其中 exampleSite 是官网中的示例文件，打开来。</description>
+    </item>
+    
+  </channel>
+</rss>
