@@ -40,6 +40,8 @@ $ cd [sitename]
 
 在 https://themes.gohugo.io 中找到自己想要的主题，进入对应 github 准备 clone 下来。这里使用 hermit 举例子。
 
+不过建议直接下载解压主题再拖进去，如果直接clone，对主题进行修改，会出现一些问题。
+
 ```shell
 $ cd sitename/themes
 $ git clone https://github.com/Track3/hermit.git
