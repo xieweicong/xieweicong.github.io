@@ -1,3 +1,4 @@
+rm -rf docs
 hugo -D
 mv public docs
 git add .
