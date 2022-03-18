@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Tue, 15 Mar 2022 18:11:07 +0800</lastBuildDate><atom:link href="https://www.xieweicong.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Mar 2022 01:25:17 +0800</lastBuildDate><atom:link href="https://www.xieweicong.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://www.xieweicong.com/about/about/</link>
+      <pubDate>Sat, 19 Mar 2022 01:25:17 +0800</pubDate>
+      
+      <guid>https://www.xieweicong.com/about/about/</guid>
+      <description>Myname: xie weicong
+Come from China</description>
+    </item>
+    
     <item>
       <title>Add_LaTeX_Support_in_Hugo</title>
       <link>https://www.xieweicong.com/posts/add-latex-support-in-hugo/</link>

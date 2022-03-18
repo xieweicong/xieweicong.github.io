@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.xieweicong.com/about/about/</loc>
+    <lastmod>2022-03-19T01:25:17+08:00</lastmod>
+  </url><url>
+    <loc>https://www.xieweicong.com/about/</loc>
+    <lastmod>2022-03-19T01:25:17+08:00</lastmod>
+  </url><url>
+    <loc>https://www.xieweicong.com/</loc>
+    <lastmod>2022-03-19T01:25:17+08:00</lastmod>
+  </url><url>
     <loc>https://www.xieweicong.com/posts/add-latex-support-in-hugo/</loc>
     <lastmod>2022-03-15T18:11:07+08:00</lastmod>
   </url><url>
@@ -15,9 +24,6 @@
     <lastmod>2022-03-15T18:11:07+08:00</lastmod>
   </url><url>
     <loc>https://www.xieweicong.com/tags/</loc>
-    <lastmod>2022-03-15T18:11:07+08:00</lastmod>
-  </url><url>
-    <loc>https://www.xieweicong.com/</loc>
     <lastmod>2022-03-15T18:11:07+08:00</lastmod>
   </url><url>
     <loc>https://www.xieweicong.com/tags/physics/</loc>
