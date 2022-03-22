@@ -2,13 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.xieweicong.com/life/</loc>
+    <lastmod>2022-03-22T20:55:54+08:00</lastmod>
+  </url><url>
+    <loc>https://www.xieweicong.com/</loc>
+    <lastmod>2022-03-22T20:55:54+08:00</lastmod>
+  </url><url>
+    <loc>https://www.xieweicong.com/life/%E5%9C%A8%E4%B8%AD%E5%9B%BD%E4%B8%80%E5%B9%B4/</loc>
+    <lastmod>2022-03-22T20:55:54+08:00</lastmod>
+  </url><url>
     <loc>https://www.xieweicong.com/about/about/</loc>
     <lastmod>2022-03-19T01:25:17+08:00</lastmod>
   </url><url>
     <loc>https://www.xieweicong.com/about/</loc>
-    <lastmod>2022-03-19T01:25:17+08:00</lastmod>
-  </url><url>
-    <loc>https://www.xieweicong.com/</loc>
     <lastmod>2022-03-19T01:25:17+08:00</lastmod>
   </url><url>
     <loc>https://www.xieweicong.com/posts/add-latex-support-in-hugo/</loc>
