@@ -6,8 +6,77 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Tue, 15 Mar 2022 18:11:07 +0800</lastBuildDate>
+		<lastBuildDate>Wed, 23 Mar 2022 22:42:44 +0800</lastBuildDate>
 		<atom:link href="https://www.xieweicong.com/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>GAMES104 引擎架构分层与整体pipeline</title>
+			<link>https://www.xieweicong.com/posts/games104-%E5%BC%95%E6%93%8E%E6%9E%B6%E6%9E%84%E5%88%86%E5%B1%82%E4%B8%8E%E6%95%B4%E4%BD%93pipeline/</link>
+			<pubDate>Wed, 23 Mar 2022 22:42:44 +0800</pubDate>
+			
+			<guid>https://www.xieweicong.com/posts/games104-%E5%BC%95%E6%93%8E%E6%9E%B6%E6%9E%84%E5%88%86%E5%B1%82%E4%B8%8E%E6%95%B4%E4%BD%93pipeline/</guid>
+			<description>A Glance of Game Engine Layers  Tool Layer 工具层 Function Layer 功能层 Ressource Layer 资源层 Core Layer 核心层 Platform Layer 平台层   +3rd Party Libraries  Resource - How to Access My Data 将数据Importing，变成资产
+Function - How to Make the World Alive Tick  世界按照普兰克时间的间隔来tick
+ Function - Dive into Ticks  tickLogic - 每一次tick的逻辑 tickRender - 每一次tick的渲染  从多核设计底层代码，比如一个核心做tickLogic一个核心做tickRender
+Core Layer  Math Library Data Structre and Containers Memory Management  游戏引擎和操作系统很类似，会单独申请一块内存，自我进行管理，为了最高效率。</description>
+			<content type="html"><![CDATA[<h2 id="a-glance-of-game-engine-layers">A Glance of Game Engine Layers</h2>
+<ol>
+<li>Tool Layer 工具层</li>
+<li>Function Layer 功能层</li>
+<li>Ressource Layer 资源层</li>
+<li>Core Layer 核心层</li>
+<li>Platform Layer 平台层</li>
+</ol>
+<ul>
+<li>+3rd Party Libraries</li>
+</ul>
+<h2 id="resource---how-to-access-my-data">Resource - How to Access My Data</h2>
+<p>将数据Importing，变成资产</p>
+<h2 id="function---how-to-make-the-world-alive">Function - How to Make the World Alive</h2>
+<h3 id="tick">Tick</h3>
+<blockquote>
+<p>世界按照普兰克时间的间隔来tick</p>
+</blockquote>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h0ka7dpwwzj20eg0c8wet.jpg" alt="截屏2022-03-24 上午12.28.47"></p>
+<h3 id="function---dive-into-ticks">Function - Dive into Ticks</h3>
+<ol>
+<li>tickLogic - 每一次tick的逻辑</li>
+<li>tickRender - 每一次tick的渲染</li>
+</ol>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h0kbq2ulzbj20uy0he0vt.jpg" alt="截屏2022-03-24 上午1.21.23"></p>
+<p>从多核设计底层代码，比如一个核心做tickLogic一个核心做tickRender</p>
+<h2 id="core-layer">Core Layer</h2>
+<ol>
+<li>Math Library</li>
+<li>Data Structre and Containers</li>
+<li>Memory Management</li>
+</ol>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h0kcxt1ae9j20a40bqglw.jpg" alt="截屏2022-03-24 上午1.27.07"></p>
+<p>游戏引擎和操作系统很类似，会单独申请一块内存，自我进行管理，为了最高效率。</p>
+<h3 id="提高内存管理速度"><strong>提高内存管理速度</strong></h3>
+<ol>
+<li>尽可能放到一起</li>
+<li>尽可能按照顺序</li>
+<li>尽可能一起读写</li>
+</ol>
+<h2 id="platform---target-on-different-platform">Platform - Target on Different Platform</h2>
+<p>不同的平台会调用不同的api去编程</p>
+<h2 id="tool---allow-anyone-to-create-game">Tool - Allow Anyone to Create Game</h2>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h0kcfr8191j20v20fsad3.jpg" alt="截屏2022-03-24 上午1.46.09"></p>
+<h2 id="why-layered-architecture">Why Layered Architecture?</h2>
+<p>复杂度太高，需要通过封装管理（封装：原子构成篮球，我们研究操作篮球）</p>
+<p>可以动上层，少动下层</p>
+<p>每一步要思考我做的是哪一层</p>
+<h2 id="mini-engine---pilot">Mini Engine - Pilot</h2>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h0kcqf5wupj20nm0ds3zj.jpg" alt="截屏2022-03-24 上午1.56.25"></p>
+<h2 id="takeaways">Takeaways</h2>
+<ul>
+<li>引擎是分层架构</li>
+<li>越底层越稳定，越上层越灵活</li>
+<li>游戏引擎最核心靠tick函数</li>
+</ul>
+]]></content>
+		</item>
 		
 		<item>
 			<title>Add_LaTeX_Support_in_Hugo</title>

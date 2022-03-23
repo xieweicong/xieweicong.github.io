@@ -5,7 +5,7 @@ draft: true
 
 ---
 
-{{< figure src="https://tva1.sinaimg.cn/large/e6c9d24egy1h0iqg989lsj20cy0cyt8z.jpg" title="xieweicong" class="left" width="200" >}}
+{{< figure src="https://tva1.sinaimg.cn/large/e6c9d24egy1h0iqg989lsj20cy0cyt8z.jpg" class="left" width="200" >}}
 
 谢玮聪
 

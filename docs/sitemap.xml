@@ -2,10 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.xieweicong.com/life/</loc>
-    <lastmod>2022-03-22T20:55:54+08:00</lastmod>
+    <loc>https://www.xieweicong.com/tags/game-engine/</loc>
+    <lastmod>2022-03-23T22:42:44+08:00</lastmod>
+  </url><url>
+    <loc>https://www.xieweicong.com/tags/games/</loc>
+    <lastmod>2022-03-23T22:42:44+08:00</lastmod>
+  </url><url>
+    <loc>https://www.xieweicong.com/tags/games104/</loc>
+    <lastmod>2022-03-23T22:42:44+08:00</lastmod>
+  </url><url>
+    <loc>https://www.xieweicong.com/posts/games104-%E5%BC%95%E6%93%8E%E6%9E%B6%E6%9E%84%E5%88%86%E5%B1%82%E4%B8%8E%E6%95%B4%E4%BD%93pipeline/</loc>
+    <lastmod>2022-03-23T22:42:44+08:00</lastmod>
+  </url><url>
+    <loc>https://www.xieweicong.com/posts/</loc>
+    <lastmod>2022-03-23T22:42:44+08:00</lastmod>
+  </url><url>
+    <loc>https://www.xieweicong.com/tags/</loc>
+    <lastmod>2022-03-23T22:42:44+08:00</lastmod>
   </url><url>
     <loc>https://www.xieweicong.com/</loc>
+    <lastmod>2022-03-23T22:42:44+08:00</lastmod>
+  </url><url>
+    <loc>https://www.xieweicong.com/life/</loc>
     <lastmod>2022-03-22T20:55:54+08:00</lastmod>
   </url><url>
     <loc>https://www.xieweicong.com/life/%E5%9C%A8%E4%B8%AD%E5%9B%BD%E4%B8%80%E5%B9%B4/</loc>
@@ -24,12 +42,6 @@
     <lastmod>2022-03-15T18:11:07+08:00</lastmod>
   </url><url>
     <loc>https://www.xieweicong.com/tags/hugo/</loc>
-    <lastmod>2022-03-15T18:11:07+08:00</lastmod>
-  </url><url>
-    <loc>https://www.xieweicong.com/posts/</loc>
-    <lastmod>2022-03-15T18:11:07+08:00</lastmod>
-  </url><url>
-    <loc>https://www.xieweicong.com/tags/</loc>
     <lastmod>2022-03-15T18:11:07+08:00</lastmod>
   </url><url>
     <loc>https://www.xieweicong.com/tags/physics/</loc>
