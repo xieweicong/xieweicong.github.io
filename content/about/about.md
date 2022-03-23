@@ -11,11 +11,7 @@ draft: true
 
 Come from ShenZhen China
 
-### 技能
-
-python c++
-
-
+python  c  numpy  pandas  scikit-learn  Final Cut Pro  figma
 
 [Tokyo University of Science](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiFhpjDqNn2AhWPF6YKHbGABJoQFnoECBIQAQ&url=https%3A%2F%2Fwww.tus.ac.jp%2F&usg=AOvVaw28sGa47YtEO1JJPRcyXsPm)
 
@@ -31,7 +27,7 @@ Love Brazilian jiu-jitsu
 
 ### contant me
 
-**email:** xieweicong95@gmail.com
+**email:**  xieweicong95@gmail.com
 
-wechat
+**Wechat:** xieweicong1995
 
