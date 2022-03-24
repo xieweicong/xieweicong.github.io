@@ -8,27 +8,11 @@
 	<meta name="theme-color" content="#494f5c">
 	<meta name="msapplication-TileColor" content="#494f5c">
 <meta itemprop="name" content="使用hugo和github Pages搭建个人博客">
-<meta itemprop="description" content="尝试过hexo，但因为看到hugo的模板更好看所以选择使用hugo。而且hugo是使用go语言开发，之后考虑学习golan和后端，所以先使用一下这个框架去感受一下。
-安装Homebrew $ /bin/bash -c &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&#34; 安装hugo $ brew install hugo 检测安装成功
-$ hugo version 创建网站文件 $ hugo new site [sitename] $ cd [sitename] 添加文章 $ hugo new posts/my-first-post.md 这样会在 contant/posts 下添加第一篇文章
-添加主题 在 https://themes.gohugo.io 中找到自己想要的主题，进入对应 github 准备 clone 下来。这里使用 hermit 举例子。
-不过建议直接下载解压主题再拖进去，如果直接clone，对主题进行修改，会出现一些问题。
-$ cd [sitename]/themes $ git clone https://github.com/Track3/hermit.git 进入 clone 下来的文件夹，可以看到这个主题的文件。其中 exampleSite 是官网中的示例文件，将config.toml 文件的内容复制到根目录同名文件中。
-之后使用 $ hugo server -d 实时预览效果吧！
-GitHub Pages的准备 创建名为[username].github.io 的仓库
-GitHub Pages会自动把当前页面的index.html显示成网页，可以选择root目录或是docs目录。"><meta itemprop="datePublished" content="2021-12-10T16:51:06+08:00" />
+<meta itemprop="description" content="尝试过hexo，但因为看到hugo的模板更好看所以选择使用hugo。而且hugo是使用go语言开发，之后考虑学习golan和后端，所以先使用"><meta itemprop="datePublished" content="2021-12-10T16:51:06+08:00" />
 <meta itemprop="dateModified" content="2021-12-10T16:51:06+08:00" />
-<meta itemprop="wordCount" content="136">
+<meta itemprop="wordCount" content="561">
 <meta itemprop="keywords" content="hugo,github pages," /><meta property="og:title" content="使用hugo和github Pages搭建个人博客" />
-<meta property="og:description" content="尝试过hexo，但因为看到hugo的模板更好看所以选择使用hugo。而且hugo是使用go语言开发，之后考虑学习golan和后端，所以先使用一下这个框架去感受一下。
-安装Homebrew $ /bin/bash -c &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&#34; 安装hugo $ brew install hugo 检测安装成功
-$ hugo version 创建网站文件 $ hugo new site [sitename] $ cd [sitename] 添加文章 $ hugo new posts/my-first-post.md 这样会在 contant/posts 下添加第一篇文章
-添加主题 在 https://themes.gohugo.io 中找到自己想要的主题，进入对应 github 准备 clone 下来。这里使用 hermit 举例子。
-不过建议直接下载解压主题再拖进去，如果直接clone，对主题进行修改，会出现一些问题。
-$ cd [sitename]/themes $ git clone https://github.com/Track3/hermit.git 进入 clone 下来的文件夹，可以看到这个主题的文件。其中 exampleSite 是官网中的示例文件，将config.toml 文件的内容复制到根目录同名文件中。
-之后使用 $ hugo server -d 实时预览效果吧！
-GitHub Pages的准备 创建名为[username].github.io 的仓库
-GitHub Pages会自动把当前页面的index.html显示成网页，可以选择root目录或是docs目录。" />
+<meta property="og:description" content="尝试过hexo，但因为看到hugo的模板更好看所以选择使用hugo。而且hugo是使用go语言开发，之后考虑学习golan和后端，所以先使用" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.xieweicong.com/posts/%E4%BD%BF%E7%94%A8hugo%E5%92%8Cgithub-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-12-10T16:51:06+08:00" />
@@ -36,15 +20,7 @@ GitHub Pages会自动把当前页面的index.html显示成网页，可以选择r
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="使用hugo和github Pages搭建个人博客"/>
-<meta name="twitter:description" content="尝试过hexo，但因为看到hugo的模板更好看所以选择使用hugo。而且hugo是使用go语言开发，之后考虑学习golan和后端，所以先使用一下这个框架去感受一下。
-安装Homebrew $ /bin/bash -c &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&#34; 安装hugo $ brew install hugo 检测安装成功
-$ hugo version 创建网站文件 $ hugo new site [sitename] $ cd [sitename] 添加文章 $ hugo new posts/my-first-post.md 这样会在 contant/posts 下添加第一篇文章
-添加主题 在 https://themes.gohugo.io 中找到自己想要的主题，进入对应 github 准备 clone 下来。这里使用 hermit 举例子。
-不过建议直接下载解压主题再拖进去，如果直接clone，对主题进行修改，会出现一些问题。
-$ cd [sitename]/themes $ git clone https://github.com/Track3/hermit.git 进入 clone 下来的文件夹，可以看到这个主题的文件。其中 exampleSite 是官网中的示例文件，将config.toml 文件的内容复制到根目录同名文件中。
-之后使用 $ hugo server -d 实时预览效果吧！
-GitHub Pages的准备 创建名为[username].github.io 的仓库
-GitHub Pages会自动把当前页面的index.html显示成网页，可以选择root目录或是docs目录。"/>
+<meta name="twitter:description" content="尝试过hexo，但因为看到hugo的模板更好看所以选择使用hugo。而且hugo是使用go语言开发，之后考虑学习golan和后端，所以先使用"/>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -164,7 +140,7 @@ git push
 				<p>
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.xieweicong.com/tags/hugo">hugo</a></span><span class="tag"><a href="https://www.xieweicong.com/tags/github-pages">github pages</a></span>
 				</p>
-				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>136 Words</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>561 Words</p>
 				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2021-12-10 16:51 &#43;0800</p>
 			</footer>
 		</article>
