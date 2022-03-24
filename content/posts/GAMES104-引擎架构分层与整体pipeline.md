@@ -19,7 +19,9 @@ tags:
 4. Core Layer 核心层
 5. Platform Layer 平台层
 
-- +3rd Party Libraries
+​    +3rd Party Libraries
+
+![截屏2022-03-24 上午11.05.54](https://tva1.sinaimg.cn/large/e6c9d24egy1h0ksmjmbroj20d00bodgp.jpg)
 
 ## Resource - How to Access My Data
 
@@ -36,7 +38,10 @@ tags:
 ### Function - Dive into Ticks
 
 1. tickLogic - 每一次tick的逻辑
+
 2. tickRender - 每一次tick的渲染
+
+   ![截屏2022-03-24 上午11.05.38](https://tva1.sinaimg.cn/large/e6c9d24egy1h0ksmc6vngj21m30u0q7k.jpg)
 
 ![截屏2022-03-24 上午1.21.23](https://tva1.sinaimg.cn/large/e6c9d24egy1h0kbq2ulzbj20uy0he0vt.jpg)
 
