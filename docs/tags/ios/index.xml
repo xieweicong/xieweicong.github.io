@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ios on xieweicong&#39;s blog</title>
+    <link>https://www.xieweicong.com/tags/ios/</link>
+    <description>Recent content in Ios on xieweicong&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Thu, 11 Mar 2021 15:41:46 +0800</lastBuildDate><atom:link href="https://www.xieweicong.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gyroscope Pomodoro</title>
+      <link>https://www.xieweicong.com/posts/gyroscope-pomodoro/</link>
+      <pubDate>Thu, 11 Mar 2021 15:41:46 +0800</pubDate>
+      
+      <guid>https://www.xieweicong.com/posts/gyroscope-pomodoro/</guid>
+      <description>This is a simple tomato clock app based on using the function of gyroscope to monitor the usage situation of the phone. Currently only the mvp development is completed. ジャイロスコープの機能を利用して、携帯電話の使用状況を監視することを基本とした、シ</description>
+    </item>
+    
+  </channel>
+</rss>

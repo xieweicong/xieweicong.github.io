@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GAMES on xieweicong&#39;s blog</title>
+    <link>https://www.xieweicong.com/tags/games/</link>
+    <description>Recent content in GAMES on xieweicong&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Wed, 23 Mar 2022 22:42:44 +0800</lastBuildDate><atom:link href="https://www.xieweicong.com/tags/games/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GAMES104 引擎架构分层与整体pipeline</title>
+      <link>https://www.xieweicong.com/posts/games104-%E5%BC%95%E6%93%8E%E6%9E%B6%E6%9E%84%E5%88%86%E5%B1%82%E4%B8%8E%E6%95%B4%E4%BD%93pipeline/</link>
+      <pubDate>Wed, 23 Mar 2022 22:42:44 +0800</pubDate>
+      
+      <guid>https://www.xieweicong.com/posts/games104-%E5%BC%95%E6%93%8E%E6%9E%B6%E6%9E%84%E5%88%86%E5%B1%82%E4%B8%8E%E6%95%B4%E4%BD%93pipeline/</guid>
+      <description>A Glance of Game Engine Layers Tool Layer 工具层 Function Layer 功能层 Ressource Layer 资源层 Core Layer 核心层 Platform Layer 平台层 ​ +3rd Party Libraries Resource - How to Access My Data 将数据Importing，变成资产 Function - How to Make the World Alive Tick 世界</description>
+    </item>
+    
+  </channel>
+</rss>
