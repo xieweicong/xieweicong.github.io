@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Thu, 03 Mar 2022 17:36:40 +0800</lastBuildDate><atom:link href="https://www.xieweicong.com/tags/physics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Jul 2022 14:41:04 +0900</lastBuildDate><atom:link href="https://www.xieweicong.com/tags/physics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为量子多体状态表现的神经网络</title>
+      <link>https://www.xieweicong.com/posts/%E4%B8%BA%E9%87%8F%E5%AD%90%E5%A4%9A%E4%BD%93%E7%8A%B6%E6%80%81%E8%A1%A8%E7%8E%B0%E7%9A%84%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</link>
+      <pubDate>Sat, 23 Jul 2022 14:41:04 +0900</pubDate>
+      
+      <guid>https://www.xieweicong.com/posts/%E4%B8%BA%E9%87%8F%E5%AD%90%E5%A4%9A%E4%BD%93%E7%8A%B6%E6%80%81%E8%A1%A8%E7%8E%B0%E7%9A%84%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</guid>
+      <description>1. 前言 在多体系统中，通过微观自由度的相互影响，出现了各种各样的现象。这一现象在非常广泛的领域中是相同的，如微观层面的凝聚态物理学和核物理学，</description>
+    </item>
+    
     <item>
       <title>通过统计力学求分子速度及碰撞平均时间</title>
       <link>https://www.xieweicong.com/posts/%E9%80%9A%E8%BF%87%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6%E6%B1%82%E5%88%86%E5%AD%90%E9%80%9F%E5%BA%A6%E5%8F%8A%E7%A2%B0%E6%92%9E%E5%B9%B3%E5%9D%87%E6%97%B6%E9%97%B4/</link>

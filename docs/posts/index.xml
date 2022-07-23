@@ -6,8 +6,20 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Wed, 23 Mar 2022 22:42:44 +0800</lastBuildDate>
+		<lastBuildDate>Sat, 23 Jul 2022 14:41:04 +0900</lastBuildDate>
 		<atom:link href="https://www.xieweicong.com/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>为量子多体状态表现的神经网络</title>
+			<link>https://www.xieweicong.com/posts/%E4%B8%BA%E9%87%8F%E5%AD%90%E5%A4%9A%E4%BD%93%E7%8A%B6%E6%80%81%E8%A1%A8%E7%8E%B0%E7%9A%84%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</link>
+			<pubDate>Sat, 23 Jul 2022 14:41:04 +0900</pubDate>
+			
+			<guid>https://www.xieweicong.com/posts/%E4%B8%BA%E9%87%8F%E5%AD%90%E5%A4%9A%E4%BD%93%E7%8A%B6%E6%80%81%E8%A1%A8%E7%8E%B0%E7%9A%84%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</guid>
+			<description>1. 前言 在多体系统中，通过微观自由度的相互影响，出现了各种各样的现象。这一现象在非常广泛的领域中是相同的，如微观层面的凝聚态物理学和核物理学，</description>
+			<content type="html"><![CDATA[<h2 id="1-前言">1. 前言</h2>
+<p>在多体系统中，通过微观自由度的相互影响，出现了各种各样的现象。这一现象在非常广泛的领域中是相同的，如微观层面的凝聚态物理学和核物理学，以及宏观层面的统计力学和天体物理学。为了研究多体现象，人们开发了各种分辨率理论方法，其中最重要的任务之一是 &ldquo;解决多体系统的基本方程&rdquo;。</p>
+]]></content>
+		</item>
 		
 		<item>
 			<title>GAMES104 引擎架构分层与整体pipeline</title>
