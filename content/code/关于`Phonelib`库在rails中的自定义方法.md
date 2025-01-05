@@ -2,8 +2,7 @@
 date: '2025-01-05T15:50:29+09:00'
 draft: false
 title: '关于Phonelib库在rails中的自定义方法'
-tags: 
-  - ruby
+tags: [ruby]
 ---
 
 In case you need to overwrite some Google's libphonenumber library data, you need to assign file path to this setter. File should be Marshal.dump'ed with existing structure like in Phonelib.phone_data. Gem is simply doing merge between hashes.

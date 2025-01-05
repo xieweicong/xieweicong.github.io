@@ -4,8 +4,7 @@ date: 2021-12-16T17:42:17+08:00
 draft: false
 toc: false
 images:
-tags: 
-  - docker
+tags: [docker]
 ---
 
 ## 前言
