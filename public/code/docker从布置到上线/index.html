@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Docker从布置到上线 | xieweicong&#39;s blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="前言
+docker技术真的非常好用和方便，但看了很多文章很杂乱，所以整理一个从安装打包到上线的全过程
+安装doker
+macOS最好直接官网下载GUI的版本安装
+在linex远程服务器上
+curl -fsSL &lt;https://get.docker.com&gt; | bash -s docker --mirror Aliyun
+修改允许的hosts
+在django中需要填入vps的地址或域名
+
+文件准备
+
+pip.conf
+这个是pip的配置文件，制作完成之后，将这个文件复制到虚拟机对应的pip根目录下，即可完成替换。主要功能是换成阿里云的镜像。在境外的话不需要这个。
+[global]
+index-url = &lt;http://mirrors.aliyun.com/pypi/simple/&gt;
+[install]
+trusted-host=mirrors.aliyun.com
+requirements.txt
+用下列代码快速导出本机或虚拟环境的所有依赖
+pip freeze &gt; requirements.txt
+Dockerfile
+docker在创建时将会使用这个文件进行构建。比较特殊的是这个文件没有后缀名，所以像Mac就不能直接创建，使用touch命令执行生成。
+touch Dockerfile
+vim Dockerfile
+FROM python:3.9
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+COPY pip.conf /root/.pip/pip.conf
+COPY requirements.txt /usr/src/app/
+RUN pip install -r /usr/src/app/requirements.txt
+RUN rm -rf /usr/src/app
+COPY . /usr/src/app
+CMD [ &#34;python&#34;, &#34;./manage.py&#34;, &#34;runserver&#34;, &#34;0.0.0.0:8080&#34;]
+CMD [ &#34;python3&#34;, &#34;-m&#34; , &#34;flask&#34;, &#34;run&#34;, &#34;--host=0.0.0.0&#34;] ##flask用这条，默认到5000端口
+
+以官方库python:3.9为基础进行制作，实际是一个装有python3.9的Linux
+运行命令创建新文件夹 /usr/src/app
+确定工作路径
+将本地的pip.conf复制到pip的根中进行替换
+将requirements.txt复制到指定目录下
+运行命令按照requirements.txt的内容进行pip安装
+运行命令删除这个文件夹中的所有内容，-rf是递归强制删除
+将整个项目复制到这个文件夹中
+执行命令运行docker时，内部Django项目的运行命令，开放8080端口
+flask用这条，默认到5000端口
+
+制作镜像image
+这里就是执行这个Dockerfile文件了，随便给镜像取个名字my-django-app，后面的.表示当前文件夹，会自动寻找Dockerfile文件并执行。">
+    <meta name="generator" content="Hugo 0.139.3">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/code/docker%E4%BB%8E%E5%B8%83%E7%BD%AE%E5%88%B0%E4%B8%8A%E7%BA%BF/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/code/docker%E4%BB%8E%E5%B8%83%E7%BD%AE%E5%88%B0%E4%B8%8A%E7%BA%BF/">
+  <meta property="og:site_name" content="xieweicong&#39;s blog">
+  <meta property="og:title" content="Docker从布置到上线">
+  <meta property="og:description" content="前言 docker技术真的非常好用和方便，但看了很多文章很杂乱，所以整理一个从安装打包到上线的全过程
+安装doker macOS最好直接官网下载GUI的版本安装
+在linex远程服务器上
+curl -fsSL &lt;https://get.docker.com&gt; | bash -s docker --mirror Aliyun 修改允许的hosts 在django中需要填入vps的地址或域名
+文件准备 pip.conf 这个是pip的配置文件，制作完成之后，将这个文件复制到虚拟机对应的pip根目录下，即可完成替换。主要功能是换成阿里云的镜像。在境外的话不需要这个。
+[global] index-url = &lt;http://mirrors.aliyun.com/pypi/simple/&gt; [install] trusted-host=mirrors.aliyun.com requirements.txt 用下列代码快速导出本机或虚拟环境的所有依赖
+pip freeze &gt; requirements.txt Dockerfile docker在创建时将会使用这个文件进行构建。比较特殊的是这个文件没有后缀名，所以像Mac就不能直接创建，使用touch命令执行生成。
+touch Dockerfile vim Dockerfile FROM python:3.9 RUN mkdir -p /usr/src/app WORKDIR /usr/src/app COPY pip.conf /root/.pip/pip.conf COPY requirements.txt /usr/src/app/ RUN pip install -r /usr/src/app/requirements.txt RUN rm -rf /usr/src/app COPY . /usr/src/app CMD [ &#34;python&#34;, &#34;./manage.py&#34;, &#34;runserver&#34;, &#34;0.0.0.0:8080&#34;] CMD [ &#34;python3&#34;, &#34;-m&#34; , &#34;flask&#34;, &#34;run&#34;, &#34;--host=0.0.0.0&#34;] ##flask用这条，默认到5000端口 以官方库python:3.9为基础进行制作，实际是一个装有python3.9的Linux 运行命令创建新文件夹 /usr/src/app 确定工作路径 将本地的pip.conf复制到pip的根中进行替换 将requirements.txt复制到指定目录下 运行命令按照requirements.txt的内容进行pip安装 运行命令删除这个文件夹中的所有内容，-rf是递归强制删除 将整个项目复制到这个文件夹中 执行命令运行docker时，内部Django项目的运行命令，开放8080端口 flask用这条，默认到5000端口 制作镜像image 这里就是执行这个Dockerfile文件了，随便给镜像取个名字my-django-app，后面的.表示当前文件夹，会自动寻找Dockerfile文件并执行。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="code">
+    <meta property="article:published_time" content="2021-12-16T17:42:17+08:00">
+    <meta property="article:modified_time" content="2021-12-16T17:42:17+08:00">
+    <meta property="article:tag" content="Docker">
+
+  <meta itemprop="name" content="Docker从布置到上线">
+  <meta itemprop="description" content="前言 docker技术真的非常好用和方便，但看了很多文章很杂乱，所以整理一个从安装打包到上线的全过程
+安装doker macOS最好直接官网下载GUI的版本安装
+在linex远程服务器上
+curl -fsSL &lt;https://get.docker.com&gt; | bash -s docker --mirror Aliyun 修改允许的hosts 在django中需要填入vps的地址或域名
+文件准备 pip.conf 这个是pip的配置文件，制作完成之后，将这个文件复制到虚拟机对应的pip根目录下，即可完成替换。主要功能是换成阿里云的镜像。在境外的话不需要这个。
+[global] index-url = &lt;http://mirrors.aliyun.com/pypi/simple/&gt; [install] trusted-host=mirrors.aliyun.com requirements.txt 用下列代码快速导出本机或虚拟环境的所有依赖
+pip freeze &gt; requirements.txt Dockerfile docker在创建时将会使用这个文件进行构建。比较特殊的是这个文件没有后缀名，所以像Mac就不能直接创建，使用touch命令执行生成。
+touch Dockerfile vim Dockerfile FROM python:3.9 RUN mkdir -p /usr/src/app WORKDIR /usr/src/app COPY pip.conf /root/.pip/pip.conf COPY requirements.txt /usr/src/app/ RUN pip install -r /usr/src/app/requirements.txt RUN rm -rf /usr/src/app COPY . /usr/src/app CMD [ &#34;python&#34;, &#34;./manage.py&#34;, &#34;runserver&#34;, &#34;0.0.0.0:8080&#34;] CMD [ &#34;python3&#34;, &#34;-m&#34; , &#34;flask&#34;, &#34;run&#34;, &#34;--host=0.0.0.0&#34;] ##flask用这条，默认到5000端口 以官方库python:3.9为基础进行制作，实际是一个装有python3.9的Linux 运行命令创建新文件夹 /usr/src/app 确定工作路径 将本地的pip.conf复制到pip的根中进行替换 将requirements.txt复制到指定目录下 运行命令按照requirements.txt的内容进行pip安装 运行命令删除这个文件夹中的所有内容，-rf是递归强制删除 将整个项目复制到这个文件夹中 执行命令运行docker时，内部Django项目的运行命令，开放8080端口 flask用这条，默认到5000端口 制作镜像image 这里就是执行这个Dockerfile文件了，随便给镜像取个名字my-django-app，后面的.表示当前文件夹，会自动寻找Dockerfile文件并执行。">
+  <meta itemprop="datePublished" content="2021-12-16T17:42:17+08:00">
+  <meta itemprop="dateModified" content="2021-12-16T17:42:17+08:00">
+  <meta itemprop="wordCount" content="172">
+  <meta itemprop="keywords" content="Docker">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Docker从布置到上线">
+  <meta name="twitter:description" content="前言 docker技术真的非常好用和方便，但看了很多文章很杂乱，所以整理一个从安装打包到上线的全过程
+安装doker macOS最好直接官网下载GUI的版本安装
+在linex远程服务器上
+curl -fsSL &lt;https://get.docker.com&gt; | bash -s docker --mirror Aliyun 修改允许的hosts 在django中需要填入vps的地址或域名
+文件准备 pip.conf 这个是pip的配置文件，制作完成之后，将这个文件复制到虚拟机对应的pip根目录下，即可完成替换。主要功能是换成阿里云的镜像。在境外的话不需要这个。
+[global] index-url = &lt;http://mirrors.aliyun.com/pypi/simple/&gt; [install] trusted-host=mirrors.aliyun.com requirements.txt 用下列代码快速导出本机或虚拟环境的所有依赖
+pip freeze &gt; requirements.txt Dockerfile docker在创建时将会使用这个文件进行构建。比较特殊的是这个文件没有后缀名，所以像Mac就不能直接创建，使用touch命令执行生成。
+touch Dockerfile vim Dockerfile FROM python:3.9 RUN mkdir -p /usr/src/app WORKDIR /usr/src/app COPY pip.conf /root/.pip/pip.conf COPY requirements.txt /usr/src/app/ RUN pip install -r /usr/src/app/requirements.txt RUN rm -rf /usr/src/app COPY . /usr/src/app CMD [ &#34;python&#34;, &#34;./manage.py&#34;, &#34;runserver&#34;, &#34;0.0.0.0:8080&#34;] CMD [ &#34;python3&#34;, &#34;-m&#34; , &#34;flask&#34;, &#34;run&#34;, &#34;--host=0.0.0.0&#34;] ##flask用这条，默认到5000端口 以官方库python:3.9为基础进行制作，实际是一个装有python3.9的Linux 运行命令创建新文件夹 /usr/src/app 确定工作路径 将本地的pip.conf复制到pip的根中进行替换 将requirements.txt复制到指定目录下 运行命令按照requirements.txt的内容进行pip安装 运行命令删除这个文件夹中的所有内容，-rf是递归强制删除 将整个项目复制到这个文件夹中 执行命令运行docker时，内部Django项目的运行命令，开放8080端口 flask用这条，默认到5000端口 制作镜像image 这里就是执行这个Dockerfile文件了，随便给镜像取个名字my-django-app，后面的.表示当前文件夹，会自动寻找Dockerfile文件并执行。">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        xieweicong&#39;s blog
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Codes
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">Docker从布置到上线</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2021-12-16T17:42:17+08:00">December 16, 2021</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="前言">前言</h2>
+<p>docker技术真的非常好用和方便，但看了很多文章很杂乱，所以整理一个从安装打包到上线的全过程</p>
+<h2 id="安装doker">安装doker</h2>
+<p>macOS最好直接官网下载GUI的版本安装</p>
+<p>在linex远程服务器上</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -fsSL &lt;https://get.docker.com&gt; | bash -s docker --mirror Aliyun
+</span></span></code></pre></div><h2 id="修改允许的hosts">修改允许的hosts</h2>
+<p>在django中需要填入vps的地址或域名</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxftfjahojj316w0oan1z.jpg" alt="截屏2021-12-06 上午12.00.39"></p>
+<h2 id="文件准备">文件准备</h2>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxftfsckyij30gy0ak74w.jpg" alt="20190408113307863"></p>
+<h3 id="pipconf"><strong>pip.conf</strong></h3>
+<p>这个是pip的配置文件，制作完成之后，将这个文件复制到虚拟机对应的pip根目录下，即可完成替换。主要功能是换成阿里云的镜像。在境外的话不需要这个。</p>
+<pre tabindex="0"><code>[global]
+index-url = &lt;http://mirrors.aliyun.com/pypi/simple/&gt;
+[install]
+trusted-host=mirrors.aliyun.com
+</code></pre><h3 id="requirementstxt"><strong>requirements.txt</strong></h3>
+<p>用下列代码快速导出本机或虚拟环境的所有依赖</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip freeze &gt; requirements.txt
+</span></span></code></pre></div><h3 id="dockerfile"><strong>Dockerfile</strong></h3>
+<p>docker在创建时将会使用这个文件进行构建。比较特殊的是这个文件没有后缀名，所以像Mac就不能直接创建，使用<code>touch</code>命令执行生成。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>touch Dockerfile
+</span></span><span style="display:flex;"><span>vim Dockerfile
+</span></span><span style="display:flex;"><span>FROM python:3.9
+</span></span><span style="display:flex;"><span>RUN mkdir -p /usr/src/app
+</span></span><span style="display:flex;"><span>WORKDIR /usr/src/app
+</span></span><span style="display:flex;"><span>COPY pip.conf /root/.pip/pip.conf
+</span></span><span style="display:flex;"><span>COPY requirements.txt /usr/src/app/
+</span></span><span style="display:flex;"><span>RUN pip install -r /usr/src/app/requirements.txt
+</span></span><span style="display:flex;"><span>RUN rm -rf /usr/src/app
+</span></span><span style="display:flex;"><span>COPY . /usr/src/app
+</span></span><span style="display:flex;"><span>CMD <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;python&#34;</span>, <span style="color:#e6db74">&#34;./manage.py&#34;</span>, <span style="color:#e6db74">&#34;runserver&#34;</span>, <span style="color:#e6db74">&#34;0.0.0.0:8080&#34;</span><span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>CMD <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;python3&#34;</span>, <span style="color:#e6db74">&#34;-m&#34;</span> , <span style="color:#e6db74">&#34;flask&#34;</span>, <span style="color:#e6db74">&#34;run&#34;</span>, <span style="color:#e6db74">&#34;--host=0.0.0.0&#34;</span><span style="color:#f92672">]</span> <span style="color:#75715e">##flask用这条，默认到5000端口</span>
+</span></span></code></pre></div><ol>
+<li>以官方库python:3.9为基础进行制作，实际是一个装有python3.9的Linux</li>
+<li>运行命令创建新文件夹 /usr/src/app</li>
+<li>确定工作路径</li>
+<li>将本地的pip.conf复制到pip的根中进行替换</li>
+<li>将requirements.txt复制到指定目录下</li>
+<li>运行命令按照requirements.txt的内容进行pip安装</li>
+<li>运行命令删除这个文件夹中的所有内容，-rf是递归强制删除</li>
+<li>将整个项目复制到这个文件夹中</li>
+<li>执行命令运行docker时，内部Django项目的运行命令，开放8080端口</li>
+<li>flask用这条，默认到5000端口</li>
+</ol>
+<h2 id="制作镜像image"><strong>制作镜像image</strong></h2>
+<p>这里就是执行这个Dockerfile文件了，随便给镜像取个名字<code>my-django-app</code>，后面的<code>.</code>表示当前文件夹，会自动寻找Dockerfile文件并执行。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker build -t my-django-app .
+</span></span></code></pre></div><h2 id="运行容器"><strong>运行容器</strong></h2>
+<p>镜像完成我们就可以通过镜像制作容器了。<code>-d</code>表示开启守护进程模式将我们的项目后台挂起，<code>-p</code>映射端口。前面的是本机的端口，后面的是Docker内部镜像的端口，这边开放的端口由上面Dockerfile文件指定过。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run -d -p 8080:8080 my-django-app
+</span></span></code></pre></div><h2 id="访问"><strong>访问</strong></h2>
+<p>直接在浏览器内输入<code>localhost:8080</code>，即可查看效果。</p>
+<h2 id="登录">登录</h2>
+<p>执行login即可登录，Mac端是已经登录过的，直接运行代码就可以通过验证了，其他端输入DockerID和密码即可完成登录。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker login
+</span></span></code></pre></div><h2 id="修改名称">修改名称</h2>
+<p>需要根据你的用户名修改你镜像的名称，比我的用户名为xieweicong95，就需要在镜像前添加xieweicong95。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker tag my-django-app xieweicong95/my-django-app
+</span></span></code></pre></div><p>如果不修改的话会报错：denied: requested access to the resource is denied。因为默认是推送到library仓库中去的，当然没有权限。</p>
+<h2 id="推送">推送</h2>
+<p>直接填写完整的镜像名进行推送。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker push xieweicong95/my-django-app
+</span></span></code></pre></div><h2 id="创建docker组避免重复输入sudo">创建docker组避免重复输入sudo</h2>
+<p>回到云端，在 Ubuntu 中所有的 docker 命令前面要加 sudo 执行管理员权限，或者</p>
+<p>添加docker組：</p>
+<pre tabindex="0"><code>sudo groupadd docker
+</code></pre><p>将目前的用户 ”$USER“ 添加到docker组：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo gpasswd -a $USER docker
+</span></span></code></pre></div><p>執行<code>newgrp docker</code>或注銷/進入以激活對組的更改。</p>
+<h2 id="拉取"><strong>拉取</strong></h2>
+<p>和前面一样在云端登录docker，连接远程主机，填写完整的镜像名进行直接拉取即可。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker pull xieweicong95/my-django-app
+</span></span></code></pre></div><p>和本地一样运行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run -d -p 8080:8080 xieweicong95/my-django-app
+</span></span></code></pre></div><h2 id="服务器修改入站规则">服务器修改入站规则</h2>
+<p>如使用Amazon Lightsail，如下图所示修改出入站规则，开放上面指定的端口</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxftfxi7eaj315y0i6mzd.jpg" alt="截屏2021-12-05 上午2.43.52"></p>
+<h2 id="访问页面">访问页面</h2>
+<p>通过 公用ip地址:8080 访问 django 服务</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/docker/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Docker</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+    &copy;  xieweicong's blog 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
