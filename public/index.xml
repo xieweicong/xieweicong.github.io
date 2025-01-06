@@ -4,30 +4,82 @@
     <title>xieweicong&#39;s blog</title>
     <link>http://localhost:1313/</link>
     <description>Recent content on xieweicong&#39;s blog</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 05 Jan 2025 15:51:56 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>xieweicong95@gmail.com (xieweicong)</managingEditor>
+    <webMaster>xieweicong95@gmail.com (xieweicong)</webMaster>
+    <copyright>© 2025 xieweicong</copyright>
+    <lastBuildDate>Sun, 05 Jan 2025 22:13:55 +0900</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>关于Ruby二三事_内置类的使用</title>
+      <link>http://localhost:1313/posts/code/%E5%85%B3%E4%BA%8Eruby%E4%BA%8C%E4%B8%89%E4%BA%8B_%E5%86%85%E7%BD%AE%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Sun, 05 Jan 2025 22:13:55 +0900</pubDate>
+      <author>xieweicong95@gmail.com (xieweicong)</author>
+      <guid>http://localhost:1313/posts/code/%E5%85%B3%E4%BA%8Eruby%E4%BA%8C%E4%B8%89%E4%BA%8B_%E5%86%85%E7%BD%AE%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description></description>
+      
+    </item>
+    
     <item>
       <title>关于Ruby二三事</title>
-      <link>http://localhost:1313/code/%E5%85%B3%E4%BA%8Eruby%E4%BA%8C%E4%B8%89%E4%BA%8B/</link>
+      <link>http://localhost:1313/posts/code/%E5%85%B3%E4%BA%8Eruby%E4%BA%8C%E4%B8%89%E4%BA%8B_%E5%BC%80%E7%AF%87/</link>
       <pubDate>Sun, 05 Jan 2025 15:51:56 +0900</pubDate>
-      <guid>http://localhost:1313/code/%E5%85%B3%E4%BA%8Eruby%E4%BA%8C%E4%B8%89%E4%BA%8B/</guid>
+      <author>xieweicong95@gmail.com (xieweicong)</author>
+      <guid>http://localhost:1313/posts/code/%E5%85%B3%E4%BA%8Eruby%E4%BA%8C%E4%B8%89%E4%BA%8B_%E5%BC%80%E7%AF%87/</guid>
       <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/code/%E5%85%B3%E4%BA%8Eruby%E4%BA%8C%E4%B8%89%E4%BA%8B_%E5%BC%80%E7%AF%87/feature.png" />
     </item>
+    
     <item>
       <title>关于Phonelib库在rails中的自定义方法</title>
-      <link>http://localhost:1313/code/%E5%85%B3%E4%BA%8Ephonelib%E5%BA%93%E5%9C%A8rails%E4%B8%AD%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E6%96%B9%E6%B3%95/</link>
+      <link>http://localhost:1313/posts/code/%E5%85%B3%E4%BA%8Ephonelib%E5%BA%93%E5%9C%A8rails%E4%B8%AD%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E6%96%B9%E6%B3%95/</link>
       <pubDate>Sun, 05 Jan 2025 15:50:29 +0900</pubDate>
-      <guid>http://localhost:1313/code/%E5%85%B3%E4%BA%8Ephonelib%E5%BA%93%E5%9C%A8rails%E4%B8%AD%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E6%96%B9%E6%B3%95/</guid>
-      <description>&lt;p&gt;In case you need to overwrite some Google&amp;rsquo;s libphonenumber library data, you need to assign file path to this setter. File should be Marshal.dump&amp;rsquo;ed with existing structure like in Phonelib.phone_data. Gem is simply doing merge between hashes.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Phonelib&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;override_phone_data &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/path/to/override_phone_data.dat&amp;#39;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In case you want to add some custom or still not updated regex patterns for certain type you can use additional regexes feature in a following way:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Phonelib&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add_additional_regex &lt;span style=&#34;color:#e6db74&#34;&gt;:us&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;Phonelib&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Core&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;MOBILE&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;[5]{10}&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# this will add number 1-555-555-5555 to be valid&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Phonelib&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add_additional_regex &lt;span style=&#34;color:#e6db74&#34;&gt;:gb&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;Phonelib&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Core&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;MOBILE&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;[1]{5}&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# this will add number 44-11-111 to be valid&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# you can also specify all regexes using this method&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Phonelib&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;additional_regexes &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;:us&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;:mobile&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[5]{10}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;, &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;:gb&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;:mobile&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[1]{5}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]]&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# or just use dump method to keep them altogether&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Phonelib&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;dump_additional_regexes &lt;span style=&#34;color:#75715e&#34;&gt;# =&amp;gt; [[&amp;#34;US&amp;#34;, :mobile, &amp;#34;[5]{10}&amp;#34;], [&amp;#34;GB&amp;#34;, :mobile, &amp;#34;[1]{5}&amp;#34;]&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Phonelib.phone_data[&#39;JP&#39;]&lt;/code&gt;来获取需要的国家的格式化信息&lt;/p&gt;</description>
+      <author>xieweicong95@gmail.com (xieweicong)</author>
+      <guid>http://localhost:1313/posts/code/%E5%85%B3%E4%BA%8Ephonelib%E5%BA%93%E5%9C%A8rails%E4%B8%AD%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E6%96%B9%E6%B3%95/</guid>
+      <description></description>
+      
     </item>
+    
+    <item>
+      <title>GAMES104 引擎架构分层与整体pipeline</title>
+      <link>http://localhost:1313/posts/code/games104-%E5%BC%95%E6%93%8E%E6%9E%B6%E6%9E%84%E5%88%86%E5%B1%82%E4%B8%8E%E6%95%B4%E4%BD%93pipeline/</link>
+      <pubDate>Wed, 23 Mar 2022 22:42:44 +0800</pubDate>
+      <author>xieweicong95@gmail.com (xieweicong)</author>
+      <guid>http://localhost:1313/posts/code/games104-%E5%BC%95%E6%93%8E%E6%9E%B6%E6%9E%84%E5%88%86%E5%B1%82%E4%B8%8E%E6%95%B4%E4%BD%93pipeline/</guid>
+      <description></description>
+      
+    </item>
+    
     <item>
       <title>Docker从布置到上线</title>
-      <link>http://localhost:1313/code/docker%E4%BB%8E%E5%B8%83%E7%BD%AE%E5%88%B0%E4%B8%8A%E7%BA%BF/</link>
+      <link>http://localhost:1313/posts/code/docker%E4%BB%8E%E5%B8%83%E7%BD%AE%E5%88%B0%E4%B8%8A%E7%BA%BF/</link>
       <pubDate>Thu, 16 Dec 2021 17:42:17 +0800</pubDate>
-      <guid>http://localhost:1313/code/docker%E4%BB%8E%E5%B8%83%E7%BD%AE%E5%88%B0%E4%B8%8A%E7%BA%BF/</guid>
-      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;docker技术真的非常好用和方便，但看了很多文章很杂乱，所以整理一个从安装打包到上线的全过程&lt;/p&gt;&#xA;&lt;h2 id=&#34;安装doker&#34;&gt;安装doker&lt;/h2&gt;&#xA;&lt;p&gt;macOS最好直接官网下载GUI的版本安装&lt;/p&gt;&#xA;&lt;p&gt;在linex远程服务器上&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl -fsSL &amp;lt;https://get.docker.com&amp;gt; | bash -s docker --mirror Aliyun&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;修改允许的hosts&#34;&gt;修改允许的hosts&lt;/h2&gt;&#xA;&lt;p&gt;在django中需要填入vps的地址或域名&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://tva1.sinaimg.cn/large/008i3skNgy1gxftfjahojj316w0oan1z.jpg&#34; alt=&#34;截屏2021-12-06 上午12.00.39&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;文件准备&#34;&gt;文件准备&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://tva1.sinaimg.cn/large/008i3skNgy1gxftfsckyij30gy0ak74w.jpg&#34; alt=&#34;20190408113307863&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;pipconf&#34;&gt;&lt;strong&gt;pip.conf&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;这个是pip的配置文件，制作完成之后，将这个文件复制到虚拟机对应的pip根目录下，即可完成替换。主要功能是换成阿里云的镜像。在境外的话不需要这个。&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[global]&#xA;index-url = &amp;lt;http://mirrors.aliyun.com/pypi/simple/&amp;gt;&#xA;[install]&#xA;trusted-host=mirrors.aliyun.com&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;requirementstxt&#34;&gt;&lt;strong&gt;requirements.txt&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;用下列代码快速导出本机或虚拟环境的所有依赖&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pip freeze &amp;gt; requirements.txt&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;dockerfile&#34;&gt;&lt;strong&gt;Dockerfile&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;docker在创建时将会使用这个文件进行构建。比较特殊的是这个文件没有后缀名，所以像Mac就不能直接创建，使用&lt;code&gt;touch&lt;/code&gt;命令执行生成。&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;touch Dockerfile&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;vim Dockerfile&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;FROM python:3.9&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;RUN mkdir -p /usr/src/app&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;WORKDIR /usr/src/app&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;COPY pip.conf /root/.pip/pip.conf&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;COPY requirements.txt /usr/src/app/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;RUN pip install -r /usr/src/app/requirements.txt&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;RUN rm -rf /usr/src/app&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;COPY . /usr/src/app&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;CMD &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;python&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;./manage.py&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;runserver&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0.0.0.0:8080&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;CMD &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;python3&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-m&amp;#34;&lt;/span&gt; , &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;flask&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;run&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;--host=0.0.0.0&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;##flask用这条，默认到5000端口&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol&gt;&#xA;&lt;li&gt;以官方库python:3.9为基础进行制作，实际是一个装有python3.9的Linux&lt;/li&gt;&#xA;&lt;li&gt;运行命令创建新文件夹 /usr/src/app&lt;/li&gt;&#xA;&lt;li&gt;确定工作路径&lt;/li&gt;&#xA;&lt;li&gt;将本地的pip.conf复制到pip的根中进行替换&lt;/li&gt;&#xA;&lt;li&gt;将requirements.txt复制到指定目录下&lt;/li&gt;&#xA;&lt;li&gt;运行命令按照requirements.txt的内容进行pip安装&lt;/li&gt;&#xA;&lt;li&gt;运行命令删除这个文件夹中的所有内容，-rf是递归强制删除&lt;/li&gt;&#xA;&lt;li&gt;将整个项目复制到这个文件夹中&lt;/li&gt;&#xA;&lt;li&gt;执行命令运行docker时，内部Django项目的运行命令，开放8080端口&lt;/li&gt;&#xA;&lt;li&gt;flask用这条，默认到5000端口&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;制作镜像image&#34;&gt;&lt;strong&gt;制作镜像image&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;这里就是执行这个Dockerfile文件了，随便给镜像取个名字&lt;code&gt;my-django-app&lt;/code&gt;，后面的&lt;code&gt;.&lt;/code&gt;表示当前文件夹，会自动寻找Dockerfile文件并执行。&lt;/p&gt;</description>
+      <author>xieweicong95@gmail.com (xieweicong)</author>
+      <guid>http://localhost:1313/posts/code/docker%E4%BB%8E%E5%B8%83%E7%BD%AE%E5%88%B0%E4%B8%8A%E7%BA%BF/</guid>
+      <description></description>
+      
     </item>
+    
+    <item>
+      <title>使用hugo和github Pages搭建个人博客</title>
+      <link>http://localhost:1313/posts/code/%E4%BD%BF%E7%94%A8hugo%E5%92%8Cgithub-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Fri, 10 Dec 2021 16:51:06 +0800</pubDate>
+      <author>xieweicong95@gmail.com (xieweicong)</author>
+      <guid>http://localhost:1313/posts/code/%E4%BD%BF%E7%94%A8hugo%E5%92%8Cgithub-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>xieweicong95@gmail.com (xieweicong)</author>
+      <guid>http://localhost:1313/about/</guid>
+      <description></description>
+      
+    </item>
+    
   </channel>
 </rss>

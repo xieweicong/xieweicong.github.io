@@ -4,16 +4,42 @@
     <title>Ruby on xieweicong&#39;s blog</title>
     <link>http://localhost:1313/tags/ruby/</link>
     <description>Recent content in Ruby on xieweicong&#39;s blog</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 05 Jan 2025 15:50:29 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>xieweicong95@gmail.com (xieweicong)</managingEditor>
+    <webMaster>xieweicong95@gmail.com (xieweicong)</webMaster>
+    <copyright>© 2025 xieweicong</copyright>
+    <lastBuildDate>Sun, 05 Jan 2025 22:13:55 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>关于Ruby二三事_内置类的使用</title>
+      <link>http://localhost:1313/posts/code/%E5%85%B3%E4%BA%8Eruby%E4%BA%8C%E4%B8%89%E4%BA%8B_%E5%86%85%E7%BD%AE%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Sun, 05 Jan 2025 22:13:55 +0900</pubDate>
+      <author>xieweicong95@gmail.com (xieweicong)</author>
+      <guid>http://localhost:1313/posts/code/%E5%85%B3%E4%BA%8Eruby%E4%BA%8C%E4%B8%89%E4%BA%8B_%E5%86%85%E7%BD%AE%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>关于Ruby二三事</title>
+      <link>http://localhost:1313/posts/code/%E5%85%B3%E4%BA%8Eruby%E4%BA%8C%E4%B8%89%E4%BA%8B_%E5%BC%80%E7%AF%87/</link>
+      <pubDate>Sun, 05 Jan 2025 15:51:56 +0900</pubDate>
+      <author>xieweicong95@gmail.com (xieweicong)</author>
+      <guid>http://localhost:1313/posts/code/%E5%85%B3%E4%BA%8Eruby%E4%BA%8C%E4%B8%89%E4%BA%8B_%E5%BC%80%E7%AF%87/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/code/%E5%85%B3%E4%BA%8Eruby%E4%BA%8C%E4%B8%89%E4%BA%8B_%E5%BC%80%E7%AF%87/feature.png" />
+    </item>
+    
     <item>
       <title>关于Phonelib库在rails中的自定义方法</title>
-      <link>http://localhost:1313/code/%E5%85%B3%E4%BA%8Ephonelib%E5%BA%93%E5%9C%A8rails%E4%B8%AD%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E6%96%B9%E6%B3%95/</link>
+      <link>http://localhost:1313/posts/code/%E5%85%B3%E4%BA%8Ephonelib%E5%BA%93%E5%9C%A8rails%E4%B8%AD%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E6%96%B9%E6%B3%95/</link>
       <pubDate>Sun, 05 Jan 2025 15:50:29 +0900</pubDate>
-      <guid>http://localhost:1313/code/%E5%85%B3%E4%BA%8Ephonelib%E5%BA%93%E5%9C%A8rails%E4%B8%AD%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E6%96%B9%E6%B3%95/</guid>
-      <description>&lt;p&gt;In case you need to overwrite some Google&amp;rsquo;s libphonenumber library data, you need to assign file path to this setter. File should be Marshal.dump&amp;rsquo;ed with existing structure like in Phonelib.phone_data. Gem is simply doing merge between hashes.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Phonelib&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;override_phone_data &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/path/to/override_phone_data.dat&amp;#39;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In case you want to add some custom or still not updated regex patterns for certain type you can use additional regexes feature in a following way:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Phonelib&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add_additional_regex &lt;span style=&#34;color:#e6db74&#34;&gt;:us&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;Phonelib&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Core&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;MOBILE&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;[5]{10}&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# this will add number 1-555-555-5555 to be valid&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Phonelib&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add_additional_regex &lt;span style=&#34;color:#e6db74&#34;&gt;:gb&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;Phonelib&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Core&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;MOBILE&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;[1]{5}&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# this will add number 44-11-111 to be valid&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# you can also specify all regexes using this method&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Phonelib&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;additional_regexes &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;:us&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;:mobile&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[5]{10}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;, &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;:gb&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;:mobile&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[1]{5}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]]&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# or just use dump method to keep them altogether&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Phonelib&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;dump_additional_regexes &lt;span style=&#34;color:#75715e&#34;&gt;# =&amp;gt; [[&amp;#34;US&amp;#34;, :mobile, &amp;#34;[5]{10}&amp;#34;], [&amp;#34;GB&amp;#34;, :mobile, &amp;#34;[1]{5}&amp;#34;]&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Phonelib.phone_data[&#39;JP&#39;]&lt;/code&gt;来获取需要的国家的格式化信息&lt;/p&gt;</description>
+      <author>xieweicong95@gmail.com (xieweicong)</author>
+      <guid>http://localhost:1313/posts/code/%E5%85%B3%E4%BA%8Ephonelib%E5%BA%93%E5%9C%A8rails%E4%B8%AD%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E6%96%B9%E6%B3%95/</guid>
+      <description></description>
+      
     </item>
+    
   </channel>
 </rss>
