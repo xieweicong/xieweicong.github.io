@@ -4,10 +4,12 @@
     <title>Authors on xieweicong&#39;s blog</title>
     <link>http://localhost:1313/authors/</link>
     <description>Recent content in Authors on xieweicong&#39;s blog</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>xieweicong95@gmail.com (xieweicong)</managingEditor>
     <webMaster>xieweicong95@gmail.com (xieweicong)</webMaster>
+    <copyright>© 2025 xieweicong</copyright>
     <atom:link href="http://localhost:1313/authors/index.xml" rel="self" type="application/rss+xml" />
+    
   </channel>
 </rss>

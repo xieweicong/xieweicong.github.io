@@ -4,18 +4,22 @@
     <title>Game-Engine on xieweicong&#39;s blog</title>
     <link>http://localhost:1313/tags/game-engine/</link>
     <description>Recent content in Game-Engine on xieweicong&#39;s blog</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>xieweicong95@gmail.com (xieweicong)</managingEditor>
     <webMaster>xieweicong95@gmail.com (xieweicong)</webMaster>
-    <lastBuildDate>Wed, 23 Mar 2022 22:42:44 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/game-engine/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2025 xieweicong</copyright>
+    <lastBuildDate>Wed, 23 Mar 2022 22:42:44 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/game-engine/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>GAMES104 引擎架构分层与整体pipeline</title>
       <link>http://localhost:1313/posts/code/games104-%E5%BC%95%E6%93%8E%E6%9E%B6%E6%9E%84%E5%88%86%E5%B1%82%E4%B8%8E%E6%95%B4%E4%BD%93pipeline/</link>
-      <pubDate>Wed, 23 Mar 2022 22:42:44 +0800</pubDate><author>xieweicong95@gmail.com (xieweicong)</author>
+      <pubDate>Wed, 23 Mar 2022 22:42:44 +0800</pubDate>
+      <author>xieweicong95@gmail.com (xieweicong)</author>
       <guid>http://localhost:1313/posts/code/games104-%E5%BC%95%E6%93%8E%E6%9E%B6%E6%9E%84%E5%88%86%E5%B1%82%E4%B8%8E%E6%95%B4%E4%BD%93pipeline/</guid>
       <description></description>
+      
     </item>
+    
   </channel>
 </rss>
