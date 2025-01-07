@@ -4,72 +4,46 @@
     <title>Posts on xieweicong&#39;s blog</title>
     <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on xieweicong&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
     <managingEditor>xieweicong95@gmail.com (xieweicong)</managingEditor>
     <webMaster>xieweicong95@gmail.com (xieweicong)</webMaster>
-    <copyright>© 2025 xieweicong</copyright>
-    <lastBuildDate>Sun, 05 Jan 2025 22:13:55 +0900</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>关于Ruby二三事_内置类的使用</title>
-      <link>http://localhost:1313/posts/code/%E5%85%B3%E4%BA%8Eruby%E4%BA%8C%E4%B8%89%E4%BA%8B_%E5%86%85%E7%BD%AE%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
-      <pubDate>Sun, 05 Jan 2025 22:13:55 +0900</pubDate>
-      <author>xieweicong95@gmail.com (xieweicong)</author>
-      <guid>http://localhost:1313/posts/code/%E5%85%B3%E4%BA%8Eruby%E4%BA%8C%E4%B8%89%E4%BA%8B_%E5%86%85%E7%BD%AE%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
-      <description></description>
-      
-    </item>
-    
+    <lastBuildDate>Sun, 05 Jan 2025 15:51:56 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>关于Ruby二三事</title>
       <link>http://localhost:1313/posts/code/%E5%85%B3%E4%BA%8Eruby%E4%BA%8C%E4%B8%89%E4%BA%8B_%E5%BC%80%E7%AF%87/</link>
-      <pubDate>Sun, 05 Jan 2025 15:51:56 +0900</pubDate>
-      <author>xieweicong95@gmail.com (xieweicong)</author>
+      <pubDate>Sun, 05 Jan 2025 15:51:56 +0900</pubDate><author>xieweicong95@gmail.com (xieweicong)</author>
       <guid>http://localhost:1313/posts/code/%E5%85%B3%E4%BA%8Eruby%E4%BA%8C%E4%B8%89%E4%BA%8B_%E5%BC%80%E7%AF%87/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/code/%E5%85%B3%E4%BA%8Eruby%E4%BA%8C%E4%B8%89%E4%BA%8B_%E5%BC%80%E7%AF%87/feature.png" />
     </item>
-    
     <item>
       <title>关于Phonelib库在rails中的自定义方法</title>
       <link>http://localhost:1313/posts/code/%E5%85%B3%E4%BA%8Ephonelib%E5%BA%93%E5%9C%A8rails%E4%B8%AD%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E6%96%B9%E6%B3%95/</link>
-      <pubDate>Sun, 05 Jan 2025 15:50:29 +0900</pubDate>
-      <author>xieweicong95@gmail.com (xieweicong)</author>
+      <pubDate>Sun, 05 Jan 2025 15:50:29 +0900</pubDate><author>xieweicong95@gmail.com (xieweicong)</author>
       <guid>http://localhost:1313/posts/code/%E5%85%B3%E4%BA%8Ephonelib%E5%BA%93%E5%9C%A8rails%E4%B8%AD%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E6%96%B9%E6%B3%95/</guid>
       <description></description>
-      
     </item>
-    
     <item>
       <title>GAMES104 引擎架构分层与整体pipeline</title>
       <link>http://localhost:1313/posts/code/games104-%E5%BC%95%E6%93%8E%E6%9E%B6%E6%9E%84%E5%88%86%E5%B1%82%E4%B8%8E%E6%95%B4%E4%BD%93pipeline/</link>
-      <pubDate>Wed, 23 Mar 2022 22:42:44 +0800</pubDate>
-      <author>xieweicong95@gmail.com (xieweicong)</author>
+      <pubDate>Wed, 23 Mar 2022 22:42:44 +0800</pubDate><author>xieweicong95@gmail.com (xieweicong)</author>
       <guid>http://localhost:1313/posts/code/games104-%E5%BC%95%E6%93%8E%E6%9E%B6%E6%9E%84%E5%88%86%E5%B1%82%E4%B8%8E%E6%95%B4%E4%BD%93pipeline/</guid>
       <description></description>
-      
     </item>
-    
     <item>
       <title>Docker从布置到上线</title>
       <link>http://localhost:1313/posts/code/docker%E4%BB%8E%E5%B8%83%E7%BD%AE%E5%88%B0%E4%B8%8A%E7%BA%BF/</link>
-      <pubDate>Thu, 16 Dec 2021 17:42:17 +0800</pubDate>
-      <author>xieweicong95@gmail.com (xieweicong)</author>
+      <pubDate>Thu, 16 Dec 2021 17:42:17 +0800</pubDate><author>xieweicong95@gmail.com (xieweicong)</author>
       <guid>http://localhost:1313/posts/code/docker%E4%BB%8E%E5%B8%83%E7%BD%AE%E5%88%B0%E4%B8%8A%E7%BA%BF/</guid>
       <description></description>
-      
     </item>
-    
     <item>
       <title>使用hugo和github Pages搭建个人博客</title>
       <link>http://localhost:1313/posts/code/%E4%BD%BF%E7%94%A8hugo%E5%92%8Cgithub-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Fri, 10 Dec 2021 16:51:06 +0800</pubDate>
-      <author>xieweicong95@gmail.com (xieweicong)</author>
+      <pubDate>Fri, 10 Dec 2021 16:51:06 +0800</pubDate><author>xieweicong95@gmail.com (xieweicong)</author>
       <guid>http://localhost:1313/posts/code/%E4%BD%BF%E7%94%A8hugo%E5%92%8Cgithub-pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
       <description></description>
-      
     </item>
-    
   </channel>
 </rss>
